@@ -20,7 +20,23 @@ Descrição do Projeto
 <!--te-->
 <!--ts-->
    * [Features do simulador](#Features)      
-      * [Recebe como entrada a saída do montador (com extensão ".obj")](#p1);
-      * [Mostra a linha que está sendo executada, valor do acumulador e contador de programa após cada instrução](#p2);
-      * [Mostra informações fornecidas pela instrução OUTPUT e aguarda o usuário digitar ENTER para continuar a execução](#pre-requisitos).
+      * Recebe como entrada a saída do montador (com extensão ".obj");
+      * Mostra a linha que está sendo executada, valor do acumulador e contador de programa após cada instrução;
+      * Mostra informações fornecidas pela instrução OUTPUT e aguarda o usuário digitar ENTER para continuar a execução.
+<!--te-->
+
+Como utilizar o montador
+=================
+<!--ts-->
+      * Para compilar o código do montador, basta digitar "g++ montador.cpp -o montador" e em seguida "./montador myprogram.asm" no Windows Powershell ou outro terminal;
+      * Caso a section data do arquivo .asm venha antes da section text, serão gerados 2 códigos objeto, sendo um com o arquivo original e outro com a section data ao final;
+      * O arquivo .obj gerado ao final sempre contém o código objeto considerando a section data ao final, para que funcione corretamente com o simulador desenvolvido.
+<!--te-->
+
+Como utilizar o simulador
+=================
+<!--ts-->
+      * Para compilar o código do simulador, basta digitar "g++ simulador.cpp -o simulador" e em seguida "./simulador myprogram.obj" no Windows Powershell ou outro terminal;
+      * O simulador só funciona corretamente com códigos objetos cuja section data se encontra ao final do código, por isso a saída do montador sempre possui esse formato.
+      
 <!--te-->
